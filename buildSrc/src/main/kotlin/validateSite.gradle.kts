@@ -33,7 +33,9 @@ dependencies {
 
 for (location in listOf("local", "remote")) {
   val capitalizedLocation = location.replaceFirstChar { it.titlecase(Locale.getDefault()) }
-  val htmlFiles = fileTree("${layout.buildDirectory.get()}/$location").matching { include("**/*.html") }
+  val htmlFiles = fileTree("${layout.buildDirectory.get()}/$location")
+    .matching { include("**/*.html") }
+    .matching { exclude("**/package-docs/pkg.pkl-lang.org/") }
 
   val buildSiteTask = "build${capitalizedLocation}Site" // defined in /build.gradle.kts
   val validateSiteTask = tasks.register("validate${capitalizedLocation}Site")
