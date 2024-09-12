@@ -23,7 +23,14 @@
         </div>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item" href="{{siteRootPath}}/main/current/index.html">Language</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+            <a href="{{siteRootPath}}/main/current/index.html" class="navbar-link">Language</a>
+            <div class="navbar-dropdown">
+                <a class="navbar-item" href="{{siteRootPath}}/main/current/pkl-cli/index.html#installation">Installation</a>
+                <a class="navbar-item" href="{{siteRootPath}}/main/current/language-reference/index.html">Language Reference</a>
+                <a class="navbar-item" href="{{siteRootPath}}/package-docs/pkl/current/index.html">Standard Library</a>
+            </div>
+        </div>
         <div class="navbar-item has-dropdown is-hoverable">
           <a href="{{siteRootPath}}/main/current/language-bindings.html" class="navbar-link">Bindings</a>
           <div class="navbar-dropdown">
